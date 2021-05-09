@@ -9,6 +9,7 @@ public class User {
     String userName;
     Date creationDate;
     FullName fullName;
+    Date birDate;
     Gender gender;
     City city;
     
