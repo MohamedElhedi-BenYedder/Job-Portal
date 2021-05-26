@@ -1,32 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap" rel="stylesheet">
-</head>
-<body >
-    <div class="searchBox" id="searchDiv">
-        <h1 class="headlineText">Check Your <br>Country Covid-19 Statictics</h1>
-        <div class="searchInput">
-            <input id="content" type="text" placeholder="country">
-            <span id="search">&#128270;</span>
-        </div>  
-    </div>
-    <div class="displayResponse">
-        <h1 class="headlineText" id="country"></h1>
-        <div class="Response">
-            <div class="cases" id="confirmed"><i class="fa fa-bullseye circle-icon" aria-hidden="true"></i><p >Confirmed</p></div>
-            <div class="cases" id="recovered"><i class="fa fa-check circle-icon" aria-hidden="true"></i><p >Recovered</p></div>
-            <div class="cases" id="critical"><i class="fa fa-heartbeat circle-icon" aria-hidden="true"></i><p >Criticial</p></div>
-            <div class="cases" id="deaths"><i class="fa fa-exclamation-triangle circle-icon" aria-hidden="true"></i><p >Deaths</p></div>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Job Portal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="styles/theme.css" />
+    <!-- add icon link -->
+    <link rel="icon" href="images/logo0.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <script src="scripts/main.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <h1 id="header">Job Portal</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="#offre">Offres</a></li>
+        <li><a href="#demande">Demandes</a></li>
+        <li><a href="#postuler">Postuler</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section id="webscoket">
+        <h2>Web Socket</h2>
+      </section>
+      <section id="offre">
+        <h2 >OFFRE</h2>
+        <section role="search" id="offresearch">
+          <label>
+            <input type="text" required class="inputsearch" />
+            <ul class="search">
+              <li s>s</li>
+              <li e>e</li>
+              <li a>a</li>
+              <li r>r</li>
+              <li c>c</li>
+              <li h>h</li>
+            </ul>
+          </label>
+        </section>
+        <div style="height: 250px; overflow: scroll; margin-top: 40px; width:100%;">
+          <div class="tablestyle" id="offretable" >
+            <div class="row header">
+              <div class="cell">Job Title</div>
+              <div class="cell">Published</div>
+              <div class="cell">Company</div>
+              <div class="cell">Location</div>
+              <div class="cell">More infos</div>
+            </div>
+            <!-- <div class="row">
+              <div class="cell" data-title="Job-Title">Front-End dev</div>
+              <div class="cell" data-title="Published">25/05/2021</div>
+              <div class="cell" data-title="Company">Actia Co.</div>
+              <div class="cell" data-title="Location">Tunis, Marsa</div>
+              <div class="cell" data-title="More-info">
+                <a href="#">More infos ...</a>
+              </div>
+            </div> -->
+          </div>
         </div>
-    </div>
-<script src="scripts/script.js"></script>
-</body>
+        <script src="scripts/Offre.js"></script>
+      </section>
+      <section id="demande">
+        <h1>Demande</h1>
+      </section>
+      <section id="postuler">
+        <h2>POSTULER</h2>
+      </section>
+    </main>
+    <footer>
+      
+      <p>
+        &copy;&nbsp;2020&nbsp;-&nbsp;<a
+          rel="author"
+          href="mailto:jhon.doe@altern.org"
+          id="author"
+          >John Doe</a
+        >
+        - All rights reserved.
+      </p>
+      <p>Check our Social Media</p>
+      <a href="#" class="fa fa-facebook"></a>
+      <a href="#" class="fa fa-twitter"></a>
+    </footer>
+  </body>
 </html>
