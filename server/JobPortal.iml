@@ -3,6 +3,10 @@
   <component name="FacetManager">
     <facet type="web" name="Web">
       <configuration>
+        <descriptors>
+          <deploymentDescriptor name="glassfish-web.xml" url="file://$MODULE_DIR$/src/main/webapp/WEB-INF/glassfish-web.xml" />
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
         <webroots>
           <root url="file://$MODULE_DIR$/src/main/webapp" relative="/" />
         </webroots>
@@ -10,6 +14,15 @@
           <root url="file://$MODULE_DIR$/src/main/java" />
           <root url="file://$MODULE_DIR$/src/main/resources" />
         </sourceRoots>
+      </configuration>
+    </facet>
+    <facet type="jpa" name="JPA">
+      <configuration>
+        <setting name="validation-enabled" value="true" />
+        <datasource-mapping>
+          <factory-entry name="JobPortal" />
+        </datasource-mapping>
+        <naming-strategy-map />
       </configuration>
     </facet>
   </component>
@@ -25,50 +38,26 @@
     </content>
     <orderEntry type="jdk" jdkName="15" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: javax.servlet:javax.servlet-api:4.0.1" level="project" />
-    <orderEntry type="library" name="Maven: org.jboss.resteasy:resteasy-servlet-initializer:4.6.0.Final" level="project" />
-    <orderEntry type="library" name="Maven: org.jboss.resteasy:resteasy-core:4.6.0.Final" level="project" />
-    <orderEntry type="library" name="Maven: org.jboss.spec.javax.xml.bind:jboss-jaxb-api_2.3_spec:1.0.1.Final" level="project" />
-    <orderEntry type="library" name="Maven: org.jboss.resteasy:resteasy-core-spi:4.6.0.Final" level="project" />
-    <orderEntry type="library" name="Maven: org.reactivestreams:reactive-streams:1.0.3" level="project" />
-    <orderEntry type="library" name="Maven: jakarta.validation:jakarta.validation-api:2.0.2" level="project" />
-    <orderEntry type="library" name="Maven: com.ibm.async:asyncutil:0.1.0" level="project" />
-    <orderEntry type="library" name="Maven: org.jboss.spec.javax.annotation:jboss-annotations-api_1.3_spec:2.0.1.Final" level="project" />
-    <orderEntry type="library" name="Maven: com.sun.activation:jakarta.activation:1.2.1" level="project" />
-    <orderEntry type="library" name="Maven: io.smallrye.config:smallrye-config:2.0.1" level="project" />
-    <orderEntry type="library" name="Maven: io.smallrye.config:smallrye-config-core:2.0.1" level="project" />
-    <orderEntry type="library" name="Maven: org.eclipse.microprofile.config:microprofile-config-api:2.0" level="project" />
-    <orderEntry type="library" name="Maven: io.smallrye.common:smallrye-common-annotation:1.5.0" level="project" />
-    <orderEntry type="library" name="Maven: io.smallrye.common:smallrye-common-expression:1.5.0" level="project" />
-    <orderEntry type="library" name="Maven: io.smallrye.common:smallrye-common-function:1.5.0" level="project" />
-    <orderEntry type="library" name="Maven: io.smallrye.common:smallrye-common-constraint:1.5.0" level="project" />
-    <orderEntry type="library" name="Maven: io.smallrye.common:smallrye-common-classloader:1.5.0" level="project" />
-    <orderEntry type="library" name="Maven: org.ow2.asm:asm:9.0" level="project" />
-    <orderEntry type="library" name="Maven: io.smallrye.config:smallrye-config-common:2.0.1" level="project" />
-    <orderEntry type="library" name="Maven: org.jboss.spec.javax.ws.rs:jboss-jaxrs-api_2.1_spec:2.0.1.Final" level="project" />
-    <orderEntry type="library" name="Maven: org.jboss.logging:jboss-logging:3.4.1.Final" level="project" />
-    <orderEntry type="library" name="Maven: org.jboss.resteasy:resteasy-jackson2-provider:4.6.0.Final" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.11.4" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.11.4" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.11.4" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:2.11.4" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.jaxrs:jackson-jaxrs-base:2.11.4" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.module:jackson-module-jaxb-annotations:2.11.4" level="project" />
-    <orderEntry type="library" name="Maven: jakarta.activation:jakarta.activation-api:1.2.1" level="project" />
-    <orderEntry type="library" name="Maven: com.github.java-json-tools:json-patch:1.13" level="project" />
-    <orderEntry type="library" name="Maven: com.github.java-json-tools:msg-simple:1.2" level="project" />
-    <orderEntry type="library" name="Maven: com.github.java-json-tools:btf:1.3" level="project" />
-    <orderEntry type="library" name="Maven: com.github.java-json-tools:jackson-coreutils:2.0" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: org.junit.jupiter:junit-jupiter-api:5.7.1" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: org.apiguardian:apiguardian-api:1.1.0" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: org.opentest4j:opentest4j:1.2.0" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: org.junit.platform:junit-platform-commons:1.7.1" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: org.junit.jupiter:junit-jupiter-engine:5.7.1" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: org.junit.platform:junit-platform-engine:1.7.1" level="project" />
-    <orderEntry type="library" name="Maven: org.sonatype.sisu:sisu-inject-bean:7.0" level="project" />
-    <orderEntry type="library" name="Maven: org.jnosql.artemis:artemis-core:0.0.9" level="project" />
-    <orderEntry type="library" name="Maven: org.jnosql.diana:diana-core:0.0.9" level="project" />
-    <orderEntry type="library" name="Maven: org.jnosql.diana:jnosql-query-api:0.0.9" level="project" />
+    <orderEntry type="library" name="Maven: jakarta.platform:jakarta.jakartaee-web-api:8.0.0" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.eclipse.microprofile.config:microprofile-config-api:1.3" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.osgi:org.osgi.annotation.versioning:1.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.eclipse.jnosql.artemis:artemis-document:1.0.0-b2" level="project" />
+    <orderEntry type="library" name="Maven: org.eclipse.jnosql.diana:diana-document:1.0.0-b2" level="project" />
+    <orderEntry type="library" name="Maven: org.eclipse.jnosql.diana:diana-core:1.0.0-b2" level="project" />
+    <orderEntry type="library" name="Maven: jakarta.nosql.communication:communication-core:1.0.0-b2" level="project" />
+    <orderEntry type="library" name="Maven: org.eclipse.jnosql.diana:diana-query:1.0.0-b2" level="project" />
+    <orderEntry type="library" name="Maven: org.antlr:antlr4-runtime:4.7.2" level="project" />
+    <orderEntry type="library" name="Maven: jakarta.nosql.communication:communication-query:1.0.0-b2" level="project" />
+    <orderEntry type="library" name="Maven: jakarta.nosql.communication:communication-document:1.0.0-b2" level="project" />
+    <orderEntry type="library" name="Maven: org.eclipse.jnosql.artemis:artemis-core:1.0.0-b2" level="project" />
+    <orderEntry type="library" name="Maven: jakarta.nosql.mapping:mapping-core:1.0.0-b2" level="project" />
+    <orderEntry type="library" name="Maven: jakarta.nosql.mapping:mapping-document:1.0.0-b2" level="project" />
+    <orderEntry type="library" name="Maven: org.eclipse.jnosql.diana:mongodb-driver:1.0.0-b2" level="project" />
+    <orderEntry type="library" name="Maven: org.eclipse.jnosql.diana:diana-driver-commons:1.0.0-b2" level="project" />
+    <orderEntry type="library" name="Maven: org.mongodb:mongodb-driver-sync:4.0.3" level="project" />
     <orderEntry type="library" name="Maven: org.projectlombok:lombok:1.18.20" level="project" />
+    <orderEntry type="library" name="Maven: org.mongodb:mongodb-driver-core:4.0.3" level="project" />
+    <orderEntry type="library" name="Maven: org.mongodb:bson:4.0.3" level="project" />
+    <orderEntry type="library" name="Maven: org.jsoup:jsoup:1.13.1" level="project" />
   </component>
 </module>
