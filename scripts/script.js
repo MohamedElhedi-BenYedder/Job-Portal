@@ -4,8 +4,8 @@ exports.__esModule = true;
 var baseURL = "http://localhost:8080/JobPortal-1.0-SNAPSHOT/api";
 var offretable = document.querySelector("#offretable");
 var offreURL = baseURL + "/Offer";
-var chess = "https://raw.githubusercontent.com/MohamedElhedi-BenYedder/test/main/db.json";
-var data = fetch(chess).then(function (response) {
+//const chess = "https://raw.githubusercontent.com/MohamedElhedi-BenYedder/test/main/db.json"
+var data = fetch(offreURL).then(function (response) {
     return response.json().then(function (data) {
         data.forEach(function (d) {
             console.log(d);

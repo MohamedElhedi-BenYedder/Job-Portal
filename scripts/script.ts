@@ -5,8 +5,8 @@ import { Offer } from "./Offer";
 const baseURL: string = "http://localhost:8080/JobPortal-1.0-SNAPSHOT/api";
 let offretable = document.querySelector("#offretable") as HTMLDivElement;
 let offreURL:string= baseURL+"/Offer"; 
-const chess = "https://raw.githubusercontent.com/MohamedElhedi-BenYedder/test/main/db.json"
-let data = fetch(chess).then(
+//const chess = "https://raw.githubusercontent.com/MohamedElhedi-BenYedder/test/main/db.json"
+let data = fetch(offreURL).then(
     response =>{
         return response.json().then((data) => {
             data.forEach((d:Offer) => {
