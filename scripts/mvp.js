@@ -3,16 +3,19 @@ var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
         return extendStatics(d, b);
     };
     return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
         extendStatics(d, b);
         function __() { this.constructor = d; }
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-Object.defineProperty(exports, "__esModule", { value: true });
+exports.__esModule = true;
+exports.Presenter = exports.Model = exports.View = exports.Observable = exports.MVPEvent = exports.StateChangeEvent = exports.IntentEvent = exports.Broker = void 0;
 var Broker = /** @class */ (function () {
     function Broker() {
         this.topics = {};
@@ -83,14 +86,14 @@ var MVPEvent = /** @class */ (function () {
         get: function () {
             return this._event;
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(MVPEvent.prototype, "state", {
         get: function () {
             return this._state;
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     return MVPEvent;
@@ -107,7 +110,7 @@ var Observable = /** @class */ (function () {
         get: function () {
             return this._topic;
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     return Observable;
@@ -148,14 +151,14 @@ var Presenter = /** @class */ (function () {
         get: function () {
             return this._view;
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Object.defineProperty(Presenter.prototype, "model", {
         get: function () {
             return this._model;
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     Presenter.prototype.attach = function (view, model) {
