@@ -19,8 +19,11 @@
           * Javascript 
       * Avancement : 
           - [x] Élaboration de l'architecture et l'implémentation des premiers services de notre api rest
-          - [ ] Implémentation de la partie FrontEnd
-          - [ ] Implémentation de Web Scraping
+          - [x] Implémentation de la partie FrontEnd
+          - [x] Implémentation de Web Scraping
+          - [x] Implémentation du Websocket Dans la partie Dashboard
+          - [x] Connexion avec la Base des données
+          - [x] Implémentation du protocole MQTT over Websocket  
       * Structure du projet : 
           - Serveur : Contient l'implémenetation du rest API 
             - Repository : Interaction avec db (MongoDb) 
